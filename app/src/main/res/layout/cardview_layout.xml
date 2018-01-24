@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/cardView"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp"
+    card_view:cardMaxElevation="20dp"
+    card_view:contentPadding="5dp"
+    card_view:contentPaddingLeft="10dp">
+    <!--
+    android:layout_width="fill_parent"
+    android:layout_height="70dp" ~?
+    card_view:cardElevation="5dp" ~?
+    card_view:contentPadding="5dp" ~margin sa loob ng pinakabox
+    card_view:cardCornerRadius="5dp" ~corner radius - ung sharpness ng corner
+    card_view:cardMaxElevation="5dp" ~?
+    android:layout_margin="5dp" ~ung kapal ng margin around(labas ng box)
+    -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardView">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_launcher"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/androidCheckBox"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Apk_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/imageview"
+            android:layout_toRightOf="@id/imageview"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/androidCheckBox"
+            card_view:layout_constraintHorizontal_bias="0.082"
+            card_view:layout_constraintStart_toEndOf="@+id/imageview"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/androidCheckBox"
+            android:layout_width="26dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/imageview"
+            android:layout_toRightOf="@id/imageview"
+            android:checked="false"
+            android:padding="20dp"
+            android:scaleX="1.25"
+            android:scaleY="1.25"
+            android:textColor="#0892d0"
+            android:theme="@style/MyCheckBox"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
